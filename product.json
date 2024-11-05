@@ -1,0 +1,150 @@
+{
+    "men": [
+        {
+            "id": 1,
+            "name": "Acqua di Gio",
+            "image_url": "/static/pictures/gold.webp",
+            "price": 1000.0
+        },
+        {
+            "id": 2,
+            "name": "Bleu de Chanel",
+            "image_url": "/static/pictures/mentor.webp",
+            "price": 1100.0
+        },
+        {
+            "id": 3,
+            "name": "Dior Sauvage",
+            "image_url": "/static/pictures/grvity.webp",
+            "price": 1200.0
+        },
+        {
+            "id": 4,
+            "name": "Tom Ford Noir",
+            "image_url": "/static/pictures/mystic.webp",
+            "price": 1300.0
+        },
+        {
+            "id": 5,
+            "name": "Paco Rabanne 1 Million",
+            "image_url": "/static/pictures/epic.webp",
+            "price": 1400.0
+        },
+        {
+            "id": 6,
+            "name": "Versace Dylan Blue",
+            "image_url": "/static/pictures/epic.webp",
+            "price": 1500.0
+        },
+        {
+            "id": 7,
+            "name": "Yves Saint Laurent La Nuit de l'Homme",
+            "image_url": "/static/pictures/mystic.webp",
+            "price": 1600.0
+        },
+        {
+            "id": 8,
+            "name": "Givenchy Gentlemen Only",
+            "image_url": "/static/pictures/mentor.webp",
+            "price": 1700.0
+        },
+        {
+            "id": 9,
+            "name": "Bvlgari Man in Black",
+            "image_url": "/static/pictures/grvity.webp",
+            "price": 1800.0
+        }
+    ],
+    "women": [
+        {
+            "id": 10,
+            "name": "Chanel No. 5",
+            "image_url": "/static/pictures/girl_1.webp",
+            "price": 1900.0
+        },
+        {
+            "id": 11,
+            "name": "J'adore by Dior",
+            "image_url": "/static/pictures/girl5.webp",
+            "price": 2000.0
+        },
+        {
+            "id": 12,
+            "name": "Flowerbomb by Viktor & Rolf",
+            "image_url": "/static/pictures/girl_1.webp",
+            "price": 2100.0
+        },
+        {
+            "id": 13,
+            "name": "Marc Jacobs Daisy",
+            "image_url": "/static/pictures/girl5.webp",
+            "price": 2200.0
+        },
+        {
+            "id": 14,
+            "name": "Yves Saint Laurent Black Opium",
+            "image_url": "/static/pictures/girl_1.webp",
+            "price": 2300.0
+        },
+        {
+            "id": 15,
+            "name": "Dolce & Gabbana Light Blue",
+            "image_url": "/static/pictures/girl5.webp",
+            "price": 2400.0
+        },
+        {
+            "id": 16,
+            "name": "Giorgio Armani Si",
+            "image_url": "/static/pictures/grvity.webp",
+            "price": 2500.0
+        },
+        {
+            "id": 17,
+            "name": "Burberry Brit Rhythm",
+            "image_url": "/static/pictures/girl4.webp",
+            "price": 2600.0
+        },
+        {
+            "id": 18,
+            "name": "Lancome La Vie Est Belle",
+            "image_url": "/static/pictures/girl_1.webp",
+            "price": 2700.0
+        },
+        {
+            "id": 19,
+            "name": "Chloe Nomade",
+            "image_url": "/static/pictures/girl4.webp",
+            "price": 2800.0
+        },
+        {
+            "id": 20,
+            "name": "Prada Candy",
+            "image_url": "/static/pictures/grvity.webp",
+            "price": 2900.0
+        },
+        {
+            "id": 21,
+            "name": "Versace Bright Crystal",
+            "image_url": "/static/pictures/girl_1.webp",
+            "price": 3000.0
+        },
+        {
+            "id": 22,
+            "name": "Gucci Bloom",
+            "image_url": "/static/pictures/girl5.webp",
+            "price": 3100.0
+        },
+        {
+            "id": 23,
+            "name": "Bvlgari Omnia Crystalline",
+            "image_url": "/static/pictures/grvity.webp",
+            "price": 3200.0
+        },
+        {
+            "id": 24,
+            "name": "Aerin Amber Musk",
+            "image_url": "/static/pictures/girl_1.webp",
+            "price": 3300.0
+        }
+    ]
+}

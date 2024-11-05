@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login or Signup</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: black; 
+            background-color: #d8d7da; 
+        }
+
+        .container {
+            max-width: 600px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            text-align: center; 
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #af7c35; 
+        }
+
+        .forms {
+            margin-top: 20px;
+            display: none; 
+        }
+
+        .active {
+            display: block; 
+        }
+
+        .form-container {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-bottom: 10px; 
+            color: #333; 
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333; 
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #af7c35; 
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%; 
+        }
+
+        button:hover {
+            background-color: #706e6b; 
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        a {
+            color: #af7c35; 
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Our Application</h1>
+
+        {% if user %}
+            <h2>Hello, {{ user.name }}!</h2>
+            <a href="/logout">Logout</a>
+        {% else %}
+            <div class="forms active" id="signup-form">
+                <div class="form-container">
+                    <h2>Sign Up</h2>
+                    <form action="/signup" method="post">
+                        <div>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div>
+                            <label for="signup-email">Email:</label>
+                            <input type="email" id="signup-email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="signup-password">Password:</label>
+                            <input type="password" id="signup-password" name="password" required>
+                        </div>
+                        <div>
+                            <label for="confirm-password">Confirm Password:</label>
+                            <input type="password" id="confirm-password" name="confirm_password" required>
+                        </div>
+                        <button type="submit">Create Account</button>
+                    </form>
+
+                    {% if message %}
+                        <p class="error-message">{{ message }}</p>
+                    {% endif %}
+                    
+                    {% if signup_success %}
+                        <p class="error-message" style="color: green;">Your account has been created successfully! You can now log in.</p>
+                    {% endif %}
+                    
+                    <p>Already have an account? <a href="#" onclick="toggleForms()">Log in here</a>.</p>
+                </div>
+            </div>
+ 
+            <div class="forms" id="login-form"> 
+                <div class="form-container">
+                    <h2>Login</h2>
+                    <form action="/login" method="post">
+                        <div>
+                            <label for="login-email">Email:</label>
+                            <input type="email" id="login-email" name="email" required>
+                        </div>
+                        <div>
+                            <label for="login-password">Password:</label>
+                            <input type="password" id="login-password" name="password" required>
+                        </div>
+                        <button type="submit">Login</button>
+                    </form>
+                    
+                    {% if message %}
+                        <p class="error-message">{{ message }}</p>
+                    {% endif %}
+                    
+                    <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign up here</a>.</p>
+                </div>
+            </div>
+        {% endif %} 
+    </div>
+
+    <script>
+        function toggleForms() {
+            const signupForm = document.getElementById('signup-form');
+            const loginForm = document.getElementById('login-form');
+            signupForm.classList.toggle('active');
+            loginForm.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Aroma</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <p>Contact Us: (+92) 456-7890 | Free Shipping on Orders Over Rs 2000!</p>
+        </div>
+    </header>
+    
+    <nav class="navbar">
+        <div class="brand-logo">
+            <img src="/static/pictures/perfu_bottle.avif" alt="Brand Logo">
+            <span class="website-name">Pure Aroma</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Our Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#"><img src="/static/pictures/cart.png" alt="Add to Cart" class="cart-icon"></a></li>
+        </ul>
+    </nav>
+    <main class="main-content1">
+        <h1>Women Collections</h1>
+
+        <div class="search-bar">
+            <form method="get" action="/search">
+                <div class="search-input">
+                    <input type="text" name="query" id="search-input" placeholder="Search for a perfume...">
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="product-grid">
+            {% for product in products %}
+            <div class="product-item">
+                <img src="{{ product.image_url }}" alt="{{ product.name }}">
+                <h2>{{ product.name }}</h2>
+                <p>Price: Rs {{ product.price }}</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            {% else %}
+            <p>No female products available.</p>
+            {% endfor %}
+        </div>
+   
+</main>
+
+   
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Need Help</h3>
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="return.html">Return Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><a href="https://www.twitter.com/">Twitter</a></li>
+            </ul>
+        </div>
+    </div>
+    <p>&copy; 2024 Pure Aroma. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+

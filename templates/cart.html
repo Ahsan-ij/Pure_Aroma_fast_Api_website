@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Your Cart</h1>
+    </header>
+    <main>
+        <ul>
+            {% for item in cart_items %}
+            <li>
+                <h2>{{ item.product_name }}</h2>
+                <p>Price: Rs {{ item.product_price }}</p>
+                <p>Quantity: {{ item.quantity }}</p>
+                <form action="/remove-from-cart/{{ item.id }}" method="post">
+                    <button type="submit">Remove from Cart</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="/product.html">Continue Shopping</a>
+    </main>
+</body>
+</html>
